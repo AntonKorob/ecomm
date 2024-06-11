@@ -18,5 +18,14 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $this->call(CategoryTableSeeder::class);
+        $this->command->info('Таблица категорий загружена данными.');
+
+        $this->call(BrandTableSeeder::class);
+        $this->command->info('Таблица брендов загружена данными.');
+
+        $this->call(ProductTableSeeder::class);
+        $this->command->info('Таблица товаров загружена данными.');
     }
 }
